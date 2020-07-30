@@ -81,10 +81,22 @@ body
     color: #5F6368;
     font-size: 15px;
     font-family: Azonix;
+    transition-duration: 0.25s;
     /*border: 1px solid #333;*/
 }
 
 .navlinks:hover
+{
+    color: #292a2c;
+    transition-duration: 0.25s;
+}
+
+#aboutmelink
+{
+    color: #292a2c;
+}
+
+#portfoliolink
 {
     color: #292a2c;
 }
@@ -122,4 +134,11 @@ body
     position: relative;
     font-family: Rajdhani;
     font-size: 20px;
+}
+
+#aboutmecontainer
+{
+    position: relative;
+    /*border: 1px solid #333;*/
+    width: 100%;
 }

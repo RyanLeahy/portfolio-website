@@ -1,14 +1,15 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
+        <meta charset="UTF-8">
         <link rel="stylesheet" href="stylesheets/desktop.css">
         <script type="text/javascript" src="scripts/scripts.js"></script>
         <title>Portfolio - Ryan Leahy</title>
     </head>
 
-    <body onscroll="changeNavPos()">
+    <body onscroll="onScroll()">
         <div class="titlebar">
-            <p id="logo">Leahy</p>
+            <p id="logo">Ryan Leahy</p>
         </div>
 
         <div class="nav"> 
@@ -23,12 +24,15 @@
         <div id="aboutme"></div>
 
         <div class="maincontainer">
-            <img src="images/headshot.png" id="headshot"/>
-            <p id="aboutmetext">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Pretium fusce id velit ut tortor pretium viverra. Amet cursus sit amet dictum sit amet justo donec. Ornare lectus sit amet est placerat in egestas erat. Sit amet aliquam id diam maecenas ultricies. Et odio pellentesque diam volutpat commodo sed egestas egestas. Tristique sollicitudin nibh sit amet commodo nulla. Ultricies tristique nulla aliquet enim. Nec feugiat in fermentum posuere. Mauris in aliquam sem fringilla ut morbi tincidunt augue interdum. Nibh tortor id aliquet lectus proin. Ullamcorper morbi tincidunt ornare massa eget egestas. Vitae proin sagittis nisl rhoncus mattis rhoncus urna. Sit amet dictum sit amet justo donec enim. Turpis massa tincidunt dui ut. Nulla malesuada pellentesque elit eget. Eget mi proin sed libero enim sed faucibus turpis in. Feugiat scelerisque varius morbi enim nunc.
+            <div id="aboutmecontainer">
+                <img src="images/headshot.png" id="headshot"/>
+                <p id="aboutmetext">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Pretium fusce id velit ut tortor pretium viverra. Amet cursus sit amet dictum sit amet justo donec. Ornare lectus sit amet est placerat in egestas erat. Sit amet aliquam id diam maecenas ultricies. Et odio pellentesque diam volutpat commodo sed egestas egestas. Tristique sollicitudin nibh sit amet commodo nulla. Ultricies tristique nulla aliquet enim. Nec feugiat in fermentum posuere. Mauris in aliquam sem fringilla ut morbi tincidunt augue interdum. Nibh tortor id aliquet lectus proin. Ullamcorper morbi tincidunt ornare massa eget egestas. Vitae proin sagittis nisl rhoncus mattis rhoncus urna. Sit amet dictum sit amet justo donec enim. Turpis massa tincidunt dui ut. Nulla malesuada pellentesque elit eget. Eget mi proin sed libero enim sed faucibus turpis in. Feugiat scelerisque varius morbi enim nunc.
 
-                A diam sollicitudin tempor id eu nisl nunc. Semper auctor neque vitae tempus quam pellentesque nec nam aliquam. Nulla facilisi morbi tempus iaculis urna id volutpat. Pulvinar elementum integer enim neque volutpat. Mattis pellentesque id nibh tortor. Varius duis at consectetur lorem donec massa sapien faucibus. Et egestas quis ipsum suspendisse ultrices gravida dictum fusce. Lectus vestibulum mattis ullamcorper velit. Id donec ultrices tincidunt arcu non sodales neque. Adipiscing elit pellentesque habitant morbi tristique senectus et. Massa massa ultricies mi quis hendrerit dolor magna eget est. A iaculis at erat pellentesque adipiscing commodo elit at. Tristique risus nec feugiat in. Vulputate ut pharetra sit amet aliquam id diam maecenas ultricies. Non curabitur gravida arcu ac tortor. Cursus metus aliquam eleifend mi. Enim nec dui nunc mattis enim. Quis viverra nibh cras pulvinar mattis nunc sed blandit. Quam id leo in vitae turpis massa sed elementum tempus. Gravida rutrum quisque non tellus.
+                    A diam sollicitudin tempor id eu nisl nunc. Semper auctor neque vitae tempus quam pellentesque nec nam aliquam. Nulla facilisi morbi tempus iaculis urna id volutpat. Pulvinar elementum integer enim neque volutpat. Mattis pellentesque id nibh tortor. Varius duis at consectetur lorem donec massa sapien faucibus. Et egestas quis ipsum suspendisse ultrices gravida dictum fusce. Lectus vestibulum mattis ullamcorper velit. Id donec ultrices tincidunt arcu non sodales neque. Adipiscing elit pellentesque habitant morbi tristique senectus et. Massa massa ultricies mi quis hendrerit dolor magna eget est. A iaculis at erat pellentesque adipiscing commodo elit at. Tristique risus nec feugiat in. Vulputate ut pharetra sit amet aliquam id diam maecenas ultricies. Non curabitur gravida arcu ac tortor. Cursus metus aliquam eleifend mi. Enim nec dui nunc mattis enim. Quis viverra nibh cras pulvinar mattis nunc sed blandit. Quam id leo in vitae turpis massa sed elementum tempus. Gravida rutrum quisque non tellus.
                 
-                Convallis a cras semper auctor neque vitae tempus. Arcu felis bibendum ut tristique et egestas quis ipsum suspendisse. Eu consequat ac felis donec et odio pellentesque. Ut sem nulla pharetra diam. Cras adipiscing enim eu turpis egestas pretium aenean pharetra magna. Ullamcorper velit sed ullamcorper morbi tincidunt ornare massa eget egestas. Posuere morbi leo urna molestie. Odio tempor orci dapibus ultrices in iaculis. Cras fermentum odio eu feugiat pretium nibh ipsum. Massa tincidunt nunc pulvinar sapien et ligula. Egestas egestas fringilla phasellus faucibus scelerisque.</p>
+                    Convallis a cras semper auctor neque vitae tempus. Arcu felis bibendum ut tristique et egestas quis ipsum suspendisse. Eu consequat ac felis donec et odio pellentesque. Ut sem nulla pharetra diam. Cras adipiscing enim eu turpis egestas pretium aenean pharetra magna. Ullamcorper velit sed ullamcorper morbi tincidunt ornare massa eget egestas. Posuere morbi leo urna molestie. Odio tempor orci dapibus ultrices in iaculis. Cras fermentum odio eu feugiat pretium nibh ipsum. Massa tincidunt nunc pulvinar sapien et ligula. Egestas egestas fringilla phasellus faucibus scelerisque.</p>
+            </div>
+            
         </div>
     </body>
 </html>

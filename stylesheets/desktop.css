@@ -18,7 +18,7 @@ body
     overflow-x: hidden;
     background-color: #ffffff;
 }
-.titlebar 
+#titlebar 
 {
     position: relative;
     width: 100%;
@@ -39,7 +39,7 @@ body
     font-family: Azonix;
 }
 
-.nav
+#nav
 {
     position: relative;
     width: 100%;
@@ -49,7 +49,7 @@ body
     background-color: #ffffff;
 }
 
-.navfixed
+#navfixed
 {
     position: fixed;
     top: 0px;
@@ -64,10 +64,9 @@ body
 #navlinkcontainer
 {
     position: relative;
-    width: 40%;
-    left: 30%;
+    width: 80%;
+    left: 10%;
     height: 35px;
-    /*border: 1px solid #333;*/
     display: flex;
     flex-wrap: nowrap;
     justify-content: space-evenly;
@@ -82,7 +81,6 @@ body
     font-size: 15px;
     font-family: Azonix;
     transition-duration: 0.25s;
-    /*border: 1px solid #333;*/
 }
 
 .navlinks:hover
@@ -108,16 +106,20 @@ body
     height: 1px;
 }
 
-.maincontainer
+#maincontainer
 {
     position: relative;
-    /*border: 1px solid #333;*/
     width: 80%;
-    height: 1500px;
     left: 10%;
     top: 35px;
     z-index: 3;
     background-color: #ffffff;
+}
+
+#aboutmecontainer
+{
+    position: relative;
+    width: 100%;
 }
 
 #headshot
@@ -136,9 +138,75 @@ body
     font-size: 20px;
 }
 
-#aboutmecontainer
+#portfolio
 {
     position: relative;
-    /*border: 1px solid #333;*/
     width: 100%;
+    height: 1px;
+}
+
+#portfoliocontainer
+{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 10%;
+}
+
+.portfoliobox
+{
+    position: relative;
+    width: 350px;
+    height: 400px;
+}
+
+.portfoliobox p
+{
+    position: relative;
+    top: 0;
+    padding: 0;
+    margin: 0;
+    font-size: 20px;
+    font-family: Azonix;
+}
+
+.portfoliobox img
+{
+    box-shadow: 0px 5px 10px 0px #888;
+    width: 350px;
+    height: 350px;
+}
+
+#footercontainer
+{
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    height: 150px;
+}
+
+#footer
+{
+    position: relative;
+    bottom: -100px;
+    width: 100%;
+    height: 50px;
+    background-color: #f2f2f2;
+    border-top: 2px solid #e4e4e4
+}
+
+#copyright
+{
+    position: relative;
+    color: #5F6368;
+    top: 18px;
+    left: 15px;
+    padding: 0;
+    margin: 0;
+    font-size: 15px;
+    font-family: Rajdhani;
 }

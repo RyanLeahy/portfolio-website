@@ -10,6 +10,11 @@
     src: url("../fonts/RajdhaniMedium.ttf")
 }
 
+html
+{
+    overflow-x: hidden;
+}
+
 body
 {
     padding: 0;

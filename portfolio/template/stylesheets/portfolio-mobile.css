@@ -10,11 +10,6 @@
     src: url("../fonts/RajdhaniMedium.ttf")
 }
 
-html
-{
-    overflow-x: hidden;
-}
-
 body
 {
     padding: 0;
@@ -23,6 +18,7 @@ body
     overflow-x: hidden;
     background-color: #ffffff;
 }
+
 #titlebar 
 {
     position: relative;
@@ -31,6 +27,7 @@ body
     box-shadow: 0px 0 10px 0px #888;
     background-color: #ffffff;
     z-index: 5;
+    overflow-x: hidden;
 }
 
 #logo
@@ -42,6 +39,7 @@ body
     margin: 0;
     font-size: 30px;
     font-family: Azonix;
+    overflow-x: hidden;
 }
 
 #navburger
@@ -53,12 +51,14 @@ body
     top: 2px;
     left: 85%;
     transition-duration: 0.25s;
+    overflow-x: hidden;
 }
 
 #nav
 {
     height: 0px;
     transition-duration: 0.25s;
+    overflow-x: hidden;
 }
 
 #navdisplayed
@@ -70,11 +70,13 @@ body
     z-index: 4;
     background-color: #ffffff;
     transition-duration: 0.25s;
+    overflow-x: hidden;
 }
 
 #navlinkcontainer
 {
     display: none;
+    overflow-x: hidden;
 }
 
 #navlinkcontainerdisplayed
@@ -87,11 +89,13 @@ body
     flex-wrap: nowrap;
     justify-content: space-evenly;
     align-items: center;
+    overflow-x: hidden;
 }
 
 .navlinks
 {
     display: none;
+    overflow-x: hidden;
 }
 
 .navlinksdisplayed
@@ -103,22 +107,26 @@ body
     font-size: 15px;
     font-family: Azonix;
     transition-duration: 0.25s;
+    overflow-x: hidden;
 }
 
 .navlinksdisplayed:hover
 {
     color: #292a2c;
     transition-duration: 0.25s;
+    overflow-x: hidden;
 }
 
 #aboutmelink
 {
     color: #292a2c;
+    overflow-x: hidden;
 }
 
 #portfoliolink
 {
     color: #292a2c;
+    overflow-x: hidden;
 }
 
 #aboutme
@@ -177,6 +185,7 @@ body
     bottom: 0;
     width: 100%;
     height: 150px;
+    overflow-x: hidden;
 }
 
 #footer
@@ -186,7 +195,8 @@ body
     width: 100%;
     height: 50px;
     background-color: #f2f2f2;
-    border-top: 2px solid #e4e4e4
+    border-top: 2px solid #e4e4e4;
+    overflow-x: hidden;
 }
 
 #copyright
@@ -199,4 +209,5 @@ body
     margin: 0;
     font-size: 15px;
     font-family: Rajdhani;
+    overflow-x: hidden;
 }

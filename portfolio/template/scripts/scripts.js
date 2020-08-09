@@ -80,6 +80,28 @@ function changeNavDisplay(navLinkClicked)
     }
 }
 
+//functions purpose is to reset the navigation menu from being open to closed if a resize event happens just in case the stylesheets switch from mobile to desktop
+function resetChangesOnResize()
+{
+    nav = document.getElementById("navdisplayed");
+    linkcontainer = document.getElementById("navlinkcontainerdisplayed");
+    links = document.getElementsByClassName("navlinksdisplayed");
+    linkslength = links.length;
+
+
+    if(nav != null)
+    {
+        navburger.src = "images/burger.jpg"; //change the image to a burger
+        nav.id = "nav"; //get rid of the nav
+        linkcontainer.id = "navlinkcontainer"; //get rid of the nav link container
+
+        for(i = linkslength - 1; i >= 0; i--)
+        {
+            links[i].className = "navlinks"; //get rid of the nav links
+        }
+    }
+}
+
 //entrypoint function for an onscroll event
 function onScroll()
 {
@@ -94,3 +116,7 @@ function onClick(navLinkClicked)
         changeNavDisplay(navLinkClicked); //changes if the navigation should appear or not
 }
 
+function onResize()
+{
+    resetChangesOnResize();
+}

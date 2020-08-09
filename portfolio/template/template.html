@@ -2,7 +2,9 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8">
-        <link rel="stylesheet" href="stylesheets/portfolio-desktop.css">
+        <meta content="width=device-width, initial-scale=1" name="viewport" />
+        <link rel="stylesheet" href="stylesheets/portfolio-desktop.css" media="(min-width: 510px)" />
+        <link rel="stylesheet" href="stylesheets/portfolio-mobile.css" media="(max-width: 510px)" />
         <script type="text/javascript" src="scripts/scripts.js"></script>
         <title>Portfolio - Ryan Leahy</title>
     </head>
@@ -10,14 +12,15 @@
     <body onscroll="onScroll()">
         <div id="titlebar">
             <p id="logo">Ryan Leahy</p>
+            <input type="image" src="images/burger.jpg" id="navburger" onclick="onClick(false)">
         </div>
 
         <div id="nav"> 
             <div id="navlinkcontainer">
-                <a href="../../index.html#aboutme" class="navlinks">about me</a>
-                <a href="../../index.html#portfolio" class="navlinks">portfolio</a>
-                <a href="https://www.linkedin.com/in/RyanPLeahy/" target="_blank" class="navlinks">linkedin</a>
-                <a href="https://github.com/RyanLeahy" target="_blank" class="navlinks">github</a>
+                <a href="../../index.html#aboutme" class="navlinks" onclick="onClick(true)">about me</a>
+                <a href="../../index.html#portfolio" class="navlinks" onclick="onClick(true)">portfolio</a>
+                <a href="https://www.linkedin.com/in/RyanPLeahy/" target="_blank" class="navlinks" onclick="onClick(true)">linkedin</a>
+                <a href="https://github.com/RyanLeahy" target="_blank" class="navlinks" onclick="onClick(true)">github</a>
             </div>
         </div>
 

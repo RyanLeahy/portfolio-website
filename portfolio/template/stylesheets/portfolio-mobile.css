@@ -133,76 +133,37 @@ body
     background-color: #ffffff;
 }
 
-#aboutmecontainer
+#projectname
 {
     position: relative;
-    width: 100%;
+    text-align: center;
+    padding-bottom: 15px;
+    margin: 0;
+    font-size: 25px;
+    font-family: Azonix;
 }
 
-#headshot
-{
-    position: relative;
-    width: 100%;
-    height: auto;
-    padding-right: 2%;
-    padding-bottom: 1%;
-}
-
-#aboutmetext
-{
-    position: relative;
-    font-family: Rajdhani;
-    font-size: 20px;
-}
-
-#portfolio
-{
-    position: relative;
-    width: 100%;
-    height: 1px;
-}
-
-#portfoliocontainer
+.storyboardcontainer
 {
     position: relative;
     width: 100%;
     height: 100%;
-    display: flex;
-    justify-content: space-evenly;
-    align-content: space-between;
-    flex-wrap: wrap;
-    margin-top: 10%;
+    /*border: 1px black solid;*/
 }
 
-.portfoliobox
+.storyboardcontainer img
 {
     position: relative;
-    width: 350px;
-    height: 400px;
+    width: 100%;
+    height: auto;
 }
 
-.portfoliobox img:hover
-{
-    box-shadow: 0px 5px 10px 5px #888;
-    transition-duration: 0.25s;
-}
-
-.portfoliobox p
+.storyboardcontainer p
 {
     position: relative;
-    top: 0;
-    padding: 0;
-    margin: 0;
+    font-family: Rajdhani;
     font-size: 20px;
-    font-family: Azonix;
-}
-
-.portfoliobox img
-{
-    box-shadow: 0px 5px 10px 0px #888;
-    width: 350px;
-    height: 350px;
-    transition-duration: 0.25s;
+    padding-bottom: 15px;
 }
 
 #footercontainer

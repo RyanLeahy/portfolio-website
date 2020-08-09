@@ -40,41 +40,57 @@ function changeNavPos()
     }
 }
 
+//function handles the drop down navigation bar appearing and disappearing
+function changeNavDisplay(navLinkClicked)
+{
+    var navburger = document.getElementById("navburger");
+    var nav, linkcontainer, links, linkslength;
+
+    if(navLinkClicked == true || navburger.src.includes("images/x.jpg") == true) //if either a nav link was clicked or the current nav button is an x then this click event is to close the nav
+    {
+        nav = document.getElementById("navdisplayed");
+        linkcontainer = document.getElementById("navlinkcontainerdisplayed");
+        links = document.getElementsByClassName("navlinksdisplayed");
+        linkslength = links.length;
+
+        navburger.src = "images/burger.jpg"; //change the image to a burger
+        nav.id = "nav"; //get rid of the nav
+        linkcontainer.id = "navlinkcontainer"; //get rid of the nav link container
+
+        for(i = linkslength - 1; i >= 0; i--)
+        {
+            links[i].className = "navlinks"; //get rid of the nav links
+        }
+    }
+    else
+    {
+        nav = document.getElementById("nav");
+        linkcontainer = document.getElementById("navlinkcontainer");
+        links = document.getElementsByClassName("navlinks");
+        linkslength = links.length;
+
+        navburger.src = "images/x.jpg"; //change the image to an x
+        nav.id = "navdisplayed"; //display the nav
+        linkcontainer.id = "navlinkcontainerdisplayed"; //display the container
+        
+        for(i = linkslength - 1; i >= 0; i--)
+        {
+            links[i].className = "navlinksdisplayed"; //display the links
+        }
+    }
+}
+
 //entrypoint function for an onscroll event
 function onScroll()
 {
-    changeNavPos(); //checks if the nav bar should be snapped to the top of the screen
-    highlightSectionLink(); //checks which section is currently in the viewport to highlight the corresponding link in the nav bar
+    if (window.innerWidth > 510 || document.documentElement.clientWidth > 510) //if the window width is more than 510px then it loads the desktop css where the nav menu should be snapped to the top
+        changeNavPos(); //checks if the nav bar should be snapped to the top of the screen
 }
 
-//function handles highlighting the link for the section currently being displayed in the viewport
-function highlightSectionLink()
+//function handles click events from inputs and links
+function onClick(navLinkClicked)
 {
-    var titlebar = document.getElementById("titlebar") //need to know if titlebar is on screen
-    var titlebarOnScreen = isElementPartiallyInViewport(titlebar, 0);
-
-    var aboutmecontainer = document.getElementById("aboutmecontainer") //need to know if aboutmecontainer is still on screen
-    var aboutmeOnScreen = isElementPartiallyInViewport(aboutmecontainer, 35);
-
-    var aboutmelink = document.getElementsByClassName("navlinks")[0]; //get the nav links that may be highlighted
-    var portfoliolink = document.getElementsByClassName("navlinks")[1];
-
-    if(titlebarOnScreen) //if the titlebar is on screen neither links should be highlighted
-    {
-        aboutmelink.id = "";
-        portfoliolink.id = "";
-    }
-    else //if you get here it means the titlebar is not on the screen and we can check what section we're looking at
-    {
-        if(aboutmeOnScreen) //if the about me section is on screen 
-        {
-            aboutmelink.id = "aboutmelink"; //apply the id to the about me link that will highlight it
-            portfoliolink.id = "";
-        }
-        else //if here that means we're looking at the portfolio
-        {
-            aboutmelink.id = "";
-            portfoliolink.id = "portfoliolink"; //so highlight the portfolio by applying an id
-        }
-    }
+    if (window.innerWidth <= 510 || document.documentElement.clientWidth <= 510) //if the window width is less than or equal to 510px than the mobile css is loaded and nav display can be modified
+        changeNavDisplay(navLinkClicked); //changes if the navigation should appear or not
 }
+

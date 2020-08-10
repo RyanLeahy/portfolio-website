@@ -44,31 +44,27 @@ function changeNavPos()
 function changeNavDisplay(navLinkClicked)
 {
     var navburger = document.getElementById("navburger");
-    var nav, linkcontainer, links, linkslength;
 
     if(navLinkClicked == true || navburger.src.includes("images/x.jpg") == true) //if either a nav link was clicked or the current nav button is an x then this click event is to close the nav
     {
-        nav = document.getElementById("navdisplayed");
-        linkcontainer = document.getElementById("navlinkcontainerdisplayed");
-        links = document.getElementsByClassName("navlinksdisplayed");
-        linkslength = links.length;
-
-        navburger.src = "images/burger.jpg"; //change the image to a burger
-        nav.id = "nav"; //get rid of the nav
-        linkcontainer.id = "navlinkcontainer"; //get rid of the nav link container
-
-        for(i = linkslength - 1; i >= 0; i--)
-        {
-            links[i].className = "navlinks"; //get rid of the nav links
-        }
+        closeNavMenu();
     }
     else
     {
-        nav = document.getElementById("nav");
-        linkcontainer = document.getElementById("navlinkcontainer");
-        links = document.getElementsByClassName("navlinks");
-        linkslength = links.length;
+        openNavMenu();
+    }
+}
 
+function openNavMenu()
+{
+    var navburger = document.getElementById("navburger");
+    var nav = document.getElementById("nav");
+    var linkcontainer = document.getElementById("navlinkcontainer");
+    var links = document.getElementsByClassName("navlinks");
+    var linkslength = links.length;
+
+    if(nav != null)
+    {
         navburger.src = "images/x.jpg"; //change the image to an x
         nav.id = "navdisplayed"; //display the nav
         linkcontainer.id = "navlinkcontainerdisplayed"; //display the container
@@ -80,13 +76,13 @@ function changeNavDisplay(navLinkClicked)
     }
 }
 
-//functions purpose is to reset the navigation menu from being open to closed if a resize event happens just in case the stylesheets switch from mobile to desktop
-function resetChangesOnResize()
+function closeNavMenu()
 {
-    nav = document.getElementById("navdisplayed");
-    linkcontainer = document.getElementById("navlinkcontainerdisplayed");
-    links = document.getElementsByClassName("navlinksdisplayed");
-    linkslength = links.length;
+    var navburger = document.getElementById("navburger");
+    var nav = document.getElementById("navdisplayed");
+    var linkcontainer = document.getElementById("navlinkcontainerdisplayed");
+    var links = document.getElementsByClassName("navlinksdisplayed");
+    var linkslength = links.length;
 
 
     if(nav != null)
@@ -157,7 +153,7 @@ function onClick(navLinkClicked)
 
 function onResize()
 {
-    resetChangesOnResize();
+    closeNavMenu();
     changeDelay();
 }
 
